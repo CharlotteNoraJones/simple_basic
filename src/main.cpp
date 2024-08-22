@@ -50,7 +50,7 @@ int main()
     player.set<Position>({.x{100}, .y{100}});
     player.set<CircleBody>({.radius{40}, .color{RED}});
 
-    Vector2LerpComponent l{.start{.x{player.get<Position>()->x}, .y{player.get<Position>()->y}},
+    Vector2LerpComponent l{.start{player.get<Position>()->x, player.get<Position>()->y},
                            .destination{.x{player.get<Position>()->x + 200}, .y{player.get<Position>()->y + 200}},
                            .ease{EaseLinear},
                            .duration{2}};
