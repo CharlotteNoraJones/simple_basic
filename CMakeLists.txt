@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.10)
 project(SimpleBasic)
 
 find_package(raylib CONFIG REQUIRED)
+find_package(flecs CONFIG REQUIRED)
 
 add_executable(SimpleBasic src/main.cpp)
 
@@ -18,3 +19,4 @@ set_target_properties(SimpleBasic PROPERTIES
     CXX_EXTENSIONS NO)
 
 target_link_libraries(SimpleBasic PRIVATE raylib)
+target_link_libraries(SimpleBasic PRIVATE flecs::flecs_static)
